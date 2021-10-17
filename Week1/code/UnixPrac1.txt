@@ -1,0 +1,14 @@
+#1 Changing directory
+cd ~/Documents/CMEECourseWork/Week1/data/fasta
+#2 Listing the files in the fasta directory.
+ls  
+#3 Counting the number of lines in all fasta files. 
+wc -l *.fasta   
+#4 Printing everything after the second line of the E.coli.fasta file.
+tail -n +2 E.coli.fasta 
+#5 Counting the sequence length of the genome from the second line of the E.coli.fasta file.
+tail -n +2 E.coli.fasta | wc -c 
+#6 Printing everything after the second line of the E.coli.fasta file, removing newline characters, identifying every "ATGC" sequence and moving them to a new line, counting the number of lines. 
+tail -n +2 E.coli.fasta | tr -d '\n' | grep -o "ATGC | wc -l    
+#7 Assigning calculated numbers to the variables "AT" and "GC", doing simple division between the variables using basic calculator. 
+AT=$(tail -n +2 E.coli.fasta | tr -cd 'A \| T' | wc -c) && GC=$(tail -n +2 E.coli.fasta | tr -cd 'G \| C' | wc -c) && echo "$AT/$GC" | bc -l
