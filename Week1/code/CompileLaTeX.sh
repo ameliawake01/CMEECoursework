@@ -1,9 +1,12 @@
 #!/bin/bash
-pdflatex $1.tex
-bibtex $1
-pdflatex $1.tex
-pdflatex $1.tex
-evince $1.pdf &
+
+filename=$(basename "$1" .tex)
+
+pdflatex $filename.tex
+bibtex $filename
+pdflatex $filename.tex
+pdflatex $filename.tex
+evince $filename.pdf &
 
 ## Cleanup
 rm *.aux
