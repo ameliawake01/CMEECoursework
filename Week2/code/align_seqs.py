@@ -6,7 +6,7 @@ __version__ = '0.0.1'
 import sys
 import csv
 
-def read_csv():
+def read_csv(): # write a function that reads in a file trims off the header and new lines and returns just the sequence data 
     """A function to read a CSV file."""
     with open('../data/align_seqs.csv','r') as f:
         
@@ -85,7 +85,18 @@ def best_match(s1,s2,l1,l2):
 
 def main(argv):
     """ Main entry point of the program """
+    if len(argv) < 3:
+        # seq1, seq2 = with open('../data/*.fasta', 'r') as f
+
+        # TODO: Assign some default seqs file paths in data directory
+    else:
+        seq1 = argv[1]
+        seq2 = argv[2]
+
+    # TODO Read the two files and return a string of the genomic sequence within
     seq1, seq2 = read_csv()
+
+
     s1,s2,l1,l2 = seq_length(seq1,seq2)
     my_best_align, my_best_score = (best_match(s1,s2,l1,l2))
 
