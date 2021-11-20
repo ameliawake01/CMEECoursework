@@ -5,4 +5,5 @@ __pycache__/
 .Rhistory
 /Week3/results
 !/Week3/results/.gitkeep
+.ipynb_checkpoints/
 
