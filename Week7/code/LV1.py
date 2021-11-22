@@ -5,8 +5,11 @@ import numpy as np
 # create array
 y = np.array([5, 20, 18, 19, 18, 7, 4])
 
-# define a function that returns the growth rate of consumer and resource population at any give time step.
+# define a function that returns the growth rate of consumer and resource population at any given time step.
 def dCR_dt(pops, t=0):
+    """
+    This function returns the growth rate of consumer and resource population at any given time.
+    """
 
     R = pops[0]
     C = pops[1]
