@@ -13,8 +13,8 @@ data$ID <- paste(data$Species, data$Temp, data$Medium, data$Citation, sep = " ")
 
 #Adding a new column to the dataframe called "ID_num",
 #replacing the ungainly IDs with numbers by transforming ID column to factor.
-data$ID <- as.factor(data$ID)
-levels(data$ID) <- 1:nlevels(data$ID)
+data$ID_num <- as.factor(data$ID)
+levels(data$ID_num) <- 1:nlevels(data$ID_num)
 
 #Removing any values less than 0 from the Time and PopBio columns in the dataframe. 
 data <- data[-c(which(data$Time < 0)), ]

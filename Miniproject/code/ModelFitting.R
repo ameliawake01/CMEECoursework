@@ -27,6 +27,7 @@ r2 = function(data) {
 r2(data = data)
 
 results_polynomial <- map_dfr(dat_list, r2, .id = "id")
+cubictable <- table(results_polynomial$r.squared, results_polynomial$AIC, results_polynomial$BIC)
 
 #Fitting a Logistic model.
 logistic_model <- function(t, r_max, K, N_0){
@@ -69,7 +70,7 @@ fit_gompertz <- function(data){
 results_gompertz <- data %>% group_by(ID_num) %>%group_modify(~fit_gompertz(data =.))
 
 
-for (i in 0:284){
+for (i in 1:284){
   #Plotting the results of the models.
   data2<-data %>% filter(ID_num == i)
   print(paste0(i, ": ", min(data2$Time), max(data2$Time)))
