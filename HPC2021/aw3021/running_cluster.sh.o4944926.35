@@ -1,0 +1,69 @@
+R is about to run
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-conda_cos6-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # Clearing workspace and turning off graphics to remove any existing plots from the space
+> rm(list = ls())
+> graphics.off()
+> 
+> # Loading all of the required functions by sourcing the main R file
+> source("aw3021_HPC_2021_main.R")
+> 
+> # Reading in the job number from the cluster (UNCOMMENT THIS OUT BEFORE SUBMISSION)
+> iter <- as.numeric(Sys.getenv("PBS_ARRAY_INDEX"))
+>   
+> # 'Reading in the job number' for testing on my machine (REMOVE THIS BEFORE SUBMISSION)
+> #iter <- 100
+>   
+> # Setting random number seed as iter
+> set.seed(iter)
+> 
+> # Selecting the correct value for community in each parallel simulation
+> # based on the value of iter
+> if (iter <= 25){
++   communiy <- 500
++ } else if (iter %in% c(26:50)){
++   community <- 1000
++ } else if (iter %in% c(51:75)){
++   community <- 2500
++ } else {
++   community <- 5000
++ } 
+>   
+> # Defining inputs for cluster_run function
+> speciation_rate <- 0.0050845
+> size <- community
+> wall_time <- 690
+> interval_rich <- 1
+> interval_oct <- round((size)/10)
+> burn_in_generations <- (8*(size))
+> output_file_name <- paste("cluster_run_output", iter, ".rda", sep = "")
+>   
+> # Running the simulation
+> cluster_run(speciation_rate, size, wall_time, interval_rich, interval_oct, burn_in_generations, output_file_name)
+
+============================================
+
+        Job resource usage summary 
+
+                 Memory (GB)    NCPUs
+ Requested  :         1             1
+ Used       :         0 (peak)   0.97 (ave)
+
+============================================
