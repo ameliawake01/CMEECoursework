@@ -1,0 +1,614 @@
+Starting code feedback for Amelia, Week7
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 3.74 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week1, Week7, Week2, .git, Miniproject, Week3, Feedback
+
+Found the following files in parent directory: .gitignore, README.md
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+
+**********************************************************************
+*~
+*.tmp
+__pycache__/
+/home/amelia-wake/Documents/CMEECoursework/Week3/MyRCourseWork/code/.RData
+.Rhistory
+/Week3/results
+!/Week3/results/.gitkeep
+.ipynb_checkpoints/
+
+
+**********************************************************************
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+
+**********************************************************************
+Project Title: CMEE Courswork Repository
+Refer to individual README files in weekly directories. 
+
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 4 weekly directories: Week1, Week2, Week3, Week7
+
+The Week7 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK7...
+
+Found the following directories: code, data, results
+
+Found the following files: README.md
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+
+**********************************************************************
+Project Title: Week 7 - Directories: code, data, results and sandbox.
+Description: 
+Code:
+1. LV1.py
+2. MyFirstJupyterNB.ipynb
+3. oaks_debugme.py
+5. profileme.py
+6. profileme2.py
+7. TestR.py
+8. TestR.R
+9. timeitme.py 
+
+Data:
+1. TestOaksData.csv
+
+Results:
+
+Sandbox:
+Junk files. 
+**********************************************************************
+
+Results directory is empty - good! 
+
+Found 8 code files: TestR.py, MyFirstJupyterNB.ipynb, profileme.py, oaks_debugme.py, profileme2.py, TestR.R, LV1.py, timeitme.py
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file TestR.py...
+
+File contents are:
+
+**********************************************************************
+import subprocess
+subprocess.Popen("Rscript --verbose TestR.R > ../results/TestR.Rout 2> ../results/TestR_errFile.Rout", shell=True).wait() #write an R script containing the contents of TestR.R and output the results.
+**********************************************************************
+
+Testing TestR.py...
+
+TestR.py is a Python script file;
+
+checking for docstrings...
+
+No functions, but no script-level docstring either
+2 pts deducted
+
+Current Points = 98
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.11038s
+
+======================================================================
+Inspecting script file MyFirstJupyterNB.ipynb...
+
+File contents are:
+
+**********************************************************************
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "65e0cf57",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+
+**********************************************************************
+
+Testing MyFirstJupyterNB.ipynb...
+
+======================================================================
+Inspecting script file profileme.py...
+
+File contents are:
+
+**********************************************************************
+#!/usr/bin/env python3
+
+""" This is a programme that does extensive maths problems in order to test profiling i.e. locate the sections of code where speed bottlenecks exist."""
+
+__author__ = 'Amelia Wake (awake21@ic.ac.uk)'
+__version__ = '0.0.1'
+
+
+def my_squares(iters):
+    """
+    This functions outputs the square of the input.
+    """
+    out = []
+    for i in range(iters):
+        out.append(i ** 2)
+    return out
+
+def my_join(iters, string):
+    """
+    This function joins two stings together.
+    """
+    out = ''
+    for i in range(iters):
+        out += string.join(", ")
+    return out
+
+def run_my_funcs(x,y):
+    """
+    This function runs the previous functions in the script.
+    """
+    print(x,y)
+    my_squares(x)
+    my_join(x,y)
+    return 0
+
+run_my_funcs(10000000,"My string")
+**********************************************************************
+
+Testing profileme.py...
+
+profileme.py is a Python script file;
+
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 98
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+10000000 My string
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 5.27082s
+
+======================================================================
+Inspecting script file oaks_debugme.py...
+
+File contents are:
+
+**********************************************************************
+#!/usr/bin/env python3
+
+"""This is a programme that opens a csv file containing species data, iterates through the rows and prints "This is an oak!" when 'Quercus' is identified. It then writes a new csv file containing all of the found Quercus individuals."""
+
+__author__ = 'Amelia Wake (awake21@ic.ac.uk)'
+__version__ = '0.0.1'
+
+
+import csv
+import sys
+import doctest #debugging
+
+#Define function
+def is_an_oak(name):
+    """ 
+    Returns True if name starts with 'quercus' 
+    
+    >>> is_an_oak('Fagus sylvatica')
+    False
+    >>> is_an_oak('Quercuss petraea')
+    False
+    >>> is_an_oak('Quercus petraea')
+    True
+    >>> is_an_oak('quercus petraea')
+    True
+    """
+    newname = name.split() #split input into first and second word, split by whitespace
+    if (newname[0].lower().startswith('quercus')) and (len(newname[0]) ==7): #if first work of new name (irrespective of upper or lower case) starts with 'quercus' and has a length of 7 characters, return True.
+        return True
+    else:
+        return False
+
+def main(argv): 
+    """
+    Opens and loops through csv rows, if 'Quercus' is found to be true, prints "Found an Oak!" Creates csv file containing all found Oaks.
+    """
+    f = open('../data/TestOaksData.csv','r')
+    g = open('../data/JustOaksData.csv','w')
+    taxa = csv.reader(f)
+    csvwrite = csv.writer(g)
+    oaks = set()
+    for row in taxa:
+        print(row)
+        print ("The genus is: ") 
+        print(row[0] + '\n')
+        if is_an_oak(row[0]):
+            print('FOUND AN OAK!\n')
+            csvwrite.writerow([row[0], row[1]])    
+
+    return 0
+doctest.testmod() #debugging
+    
+if (__name__ == "__main__"):
+    status = main(sys.argv)
+
+**********************************************************************
+
+Testing oaks_debugme.py...
+
+oaks_debugme.py is a Python script file;
+
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 98
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+['Genus', ' species']
+The genus is: 
+Genus
+
+['Quercus', ' robur']
+The genus is: 
+Quercus
+
+FOUND AN OAK!
+
+['Fraxinus', ' excelsior']
+The genus is: 
+Fraxinus
+
+['Pinus', ' sylvestris']
+The genus is: 
+Pinus
+
+['Quercus', ' cerris']
+The genus is: 
+Quercus
+
+FOUND AN OAK!
+
+['Quercus', ' petraea']
+The genus is: 
+Quercus
+
+FOUND AN OAK!
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.05191s
+
+======================================================================
+Inspecting script file profileme2.py...
+
+File contents are:
+
+**********************************************************************
+#!/usr/bin/env python3
+
+""" This programme is doing the same functions as profileme.py however it has converted the loop to a list comprehension and replaced the .join with an explicit string concatenation."""
+
+
+def my_squares(iters):
+    """
+    This functions outputs the square of the input.
+    """
+    out = [i ** 2 for i in range(iters)]
+    return out
+
+def my_join(iters, string):
+     """
+    This function joins two stings together.
+    """
+    out = ''
+    for i in range(iters):
+        out += ", " + string
+    return out
+
+def run_my_funcs(x,y):
+    """
+    This function runs the previous functions in the script.
+    """
+    print(x,y)
+    my_squares(x)
+    my_join(x,y)
+    return 0
+
+run_my_funcs(10000000,"My string")
+**********************************************************************
+
+Testing profileme2.py...
+
+profileme2.py is a Python script file;
+
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 98
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error (or warning):
+  File "profileme2.py", line 17
+    out = ''
+           ^
+IndentationError: unindent does not match any outer indentation level
+
+======================================================================
+Inspecting script file TestR.R...
+
+File contents are:
+
+**********************************************************************
+print("Hello, this is R!") #prints to console "Hello, this is R!"
+**********************************************************************
+
+Testing TestR.R...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+[1] "Hello, this is R!"
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.05477s
+
+======================================================================
+Inspecting script file LV1.py...
+
+File contents are:
+
+**********************************************************************
+import scipy as sc
+import scipy.integrate as integrate
+import numpy as np
+
+# create array
+y = np.array([5, 20, 18, 19, 18, 7, 4])
+
+# define a function that returns the growth rate of consumer and resource population at any given time step.
+def dCR_dt(pops, t=0):
+    """
+    This function returns the growth rate of consumer and resource population at any given time.
+    """
+
+    R = pops[0]
+    C = pops[1]
+    dRdt = r * R - a * R * C 
+    dCdt = -z * C + e * a * R * C
+    
+    return np.array([dRdt, dCdt])
+
+# assign parameter values
+r = 1.
+a = 0.1 
+z = 1.5
+e = 0.75
+
+# define the time vector
+t = np.linspace(0, 15, 1000)
+
+# set the intial conditions for the two populations and convert the two into an array
+R0 = 10
+C0 = 5 
+RC0 = np.array([R0, C0])
+
+# now numerically integrate this system forward from those starting conditions
+pops, infodict = integrate.odeint(dCR_dt, RC0, t, full_output=True)
+
+import matplotlib.pylab as p
+
+# open an empty figure object
+f1 = p.figure()
+
+# plot graph
+p.plot(t, pops[:,0], 'g-', label='Resource density') # Plot
+p.plot(t, pops[:,1]  , 'b-', label='Consumer density')
+p.grid()
+p.legend(loc='best')
+p.xlabel('Time')
+p.ylabel('Population density')
+p.title('Consumer-Resource population dynamics')
+
+# save figure as pdf
+f1.savefig('../results/LV_model.pdf') #Save figure
+
+# open an empty figure object
+f2 = p.figure()
+
+# plot graph
+p.plot(pops[:,0], pops[:,1], 'r-') # Plot
+p.grid()
+p.xlabel('Resource density')
+p.ylabel('Consumer density')
+p.title('Consumer-Resource population dynamics')
+
+# save figure as pdf
+f2.savefig('../results/LV2_model.pdf') #Save figure
+**********************************************************************
+
+Testing LV1.py...
+
+LV1.py is a Python script file;
+
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Missing docstring, either in one or functions and/or at the script level
+
+Current Points = 97.5
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.75267s
+
+======================================================================
+Inspecting script file timeitme.py...
+
+File contents are:
+
+**********************************************************************
+"""this script is comparing the most efficient ways to do something specific, like squaring numbers and joining strings together (these have been imported from profileme.py), as part of a larger programme.""" 
+
+##############################################################################
+# loops vs. list comprehensions: which is faster?
+##############################################################################
+
+iters = 1000000
+
+import timeit
+
+from profileme import my_squares as my_squares_loops
+
+from profileme2 import my_squares as my_squares_lc
+
+##############################################################################
+# loops vs. the join method for strings: which is faster?
+##############################################################################
+
+mystring = "my string"
+
+from profileme import my_join as my_join_join
+
+from profileme2 import my_join as my_join
+
+#this script is comparing the most efficient ways to do something specific, like squaring numbers and joining strings together, these have been imported from profileme.py. 
+
+**********************************************************************
+
+Testing timeitme.py...
+
+timeitme.py is a Python script file;
+
+checking for docstrings...
+
+Found no functions, but one docstring for the script, good
+
+Current Points = 97.5
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+10000000 My string
+
+**********************************************************************
+
+Encountered error (or warning):
+Traceback (most recent call last):
+  File "timeitme.py", line 13, in <module>
+    from profileme2 import my_squares as my_squares_lc
+  File "/home/alexander/Documents/Teaching/CMEE/2020-21/StudentRepos/AmeliaWake_aw3021/Week7/code/profileme2.py", line 17
+    out = ''
+           ^
+IndentationError: unindent does not match any outer indentation level
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 2 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 97.5
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
