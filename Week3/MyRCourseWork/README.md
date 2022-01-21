@@ -24,7 +24,10 @@ This is an R script. This script illustrates the browser() function, a simple wa
 This is an R script. This script exemplifies the use of control-flow tools in fine-tuning a programme, such statements are useful to include in functions and scripts if you only want to perform tasks under a certain condition. This script takes no arguments and prints to the console.
 
 8. DataWrang.R
+This is an R script. This script introduces data wrangline, the tidying up of data and formatting before analysis. 
+
 9. DataWrangTidy.R
+This is an R script. This script behaves similarly to DataWrang.R except it used the additional package: tidyverse.
 
 10. Florida.Latex.tex
 This is a simple .tex file.
@@ -39,7 +42,10 @@ This is a Python script. This script behaves exactly the same as get_TreeHeight.
 This is an R script. This script takes a .csv file name from the command line and outputs the results like TreeHeight.R, but includes the input file name in the ouput file name as InputFileName_treeheights.csv.
 
 14. Girko.R
+This is an R script. This script illustrates Girko's circular law, and draws the results of a simulation. This script outputs a .pdf file to the results directory. 
+
 15. GPDD_Data.R
+This is an R script. This script demonstrates the capabilities of the additional package: maps. 
 16. MyBars.R
 
 17. next.R
