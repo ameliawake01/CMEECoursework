@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+__author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
+__version__ = '0.0.1'
+
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),
           ('Junco phaeonotus','Yellow-eyed junco',19.5),
@@ -6,7 +10,7 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
         )
 
 # Birds is a tuple of tuples of length three: latin name, common name, mass.
-# write a (short) script to print these on a separate line or output block by species 
+# Write a (short) script to print these on a separate line or output block by species 
 a = [i for i in ["Passerculus sandwichensis", "Savannah sparrow", "18.7"]]
 
 b = [i for i in ["Delichon urbica", "House martin", "19"]]
@@ -32,12 +36,3 @@ for x in birds:
 for x in birds:
     print("Latin name: ", e[0], "        Common name: ", e[1], "       Mass: ", e[2])
     break
-
-# A nice example output is:
-# 
-# Latin name: Passerculus sandwichensis
-# Common name: Savannah sparrow
-# Mass: 18.7
-# ... etc.
-
-# Hints: use the "print" command! You can use list comprehensions!

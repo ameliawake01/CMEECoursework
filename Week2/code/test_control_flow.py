@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-"""Some functions exemplifying the use of control statements"""
-#docstrings are considered part of the running code (normal comments are stripped). Hence, you can access your docstrings at run time. 
+"""Some functions exemplifying the use of unit testing and code compartmentalisation."""
 
 __author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
 __version__ = '0.0.1'
@@ -10,8 +9,13 @@ __version__ = '0.0.1'
 import sys # module to interface our program with the operating system
 import doctest # import the doctest module
 
+# Compartmentalising code into a bunch of functions is more efficient as it is better
+# for debugging, unit testing and profiling. 
+# It also makes code more compact by minimising redundancies.
+# It allows you to import and use useful functions
 def even_or_odd(x=0):
-    """Find whether a number x is even or odd.
+    """
+    Find whether a number x is even or odd.
       
     >>> even_or_odd(10)
     '10 is Even!'
@@ -34,11 +38,19 @@ def even_or_odd(x=0):
     return "%d is Odd!" % x
 
 def main(argv): 
+    """ 
+    Main entry point of the programme. 
+    """
     print(even_or_odd(22))
     print(even_or_odd(33))
     return 0
 
 if (__name__ == "__main__"):
+    """
+    Makes sure the "main" function is called from command line.
+    """  
     status = main(sys.argv)
 
+
+# Unit testing prevents the most common mistakes and helps you write reliable code. 
 doctest.testmod() # To run with embedded tests

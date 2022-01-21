@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+__author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
+__version__ = '0.0.1'
+
+# Import required extra packages.
 import csv
 
 # Read a file containing:
@@ -11,7 +16,7 @@ with open('../data/testcsv.csv','r') as f:
         print(row)
         print("The species is", row[0])
 
-# write a file containing only species name and Body mass
+# Write a file containing only species name and Body mass
 with open('../data/testcsv.csv','r') as f:
     with open('../data/bodymass.csv','w') as g:
 

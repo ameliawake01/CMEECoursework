@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+__author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
+__version__ = '0.0.1'
+
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
          ('Peromyscus crinitus', 'Rodentia'),
@@ -17,13 +21,7 @@ taxa_dic = {'Chiroptera': ['Myotis lucifungus'],
         'Afrosoricida': ['Microgale dobsoni', 'Microgale talazaci'], 
         'Carnivora': ['Lyacon pictus', 'Arctocephalus gazella', 'Canis lupus']}
 
-# For this we use a method called items(). This analyses a dictionary and returns keys and values stored as tuples.
+# For this we use a method called .items(). This analyses a dictionary and returns keys and values stored as tuples.
 for key, value in taxa_dic.items():
         print("Key:",key)
         print("Value:",str(value))
-
-# An example output is:
-#  
-# 'Chiroptera' : set(['Myotis lucifugus']) ... etc.
-#  OR,
-# 'Chiroptera': {'Myotis lucifugus'} ... etc

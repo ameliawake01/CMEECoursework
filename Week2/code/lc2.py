@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+__author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
+__version__ = '0.0.1'
+
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets
 rainfall = (('JAN',111.4),
