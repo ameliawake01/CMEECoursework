@@ -2,6 +2,12 @@
 __author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
 __version__ = '0.0.1'
 
+"""
+This is a Python script. This script illustrates the use of list comprehensions and 
+conventional loops and compares both methods in relation to species data. This script takes 
+no arguments and prints to the console.
+"""
+
 # Defining a list and populating it with species data.
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),

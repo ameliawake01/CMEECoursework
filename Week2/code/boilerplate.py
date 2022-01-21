@@ -10,6 +10,12 @@ __author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
 
+"""
+This is a simple Python boilerplate. This script illustrates the appropriate structure of a 
+Python programme. This script takes no arguments and does not output anything. This script 
+requires an additional package: 'sys'.
+"""
+
 # Module to interface our program with the operating system.
 import sys 
 

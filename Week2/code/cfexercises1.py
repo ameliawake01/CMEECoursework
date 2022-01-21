@@ -2,6 +2,12 @@
 __author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
 __version__ = '0.0.1'
 
+"""
+This is a Python script. This script demonstrates the use of conditionals to allow 
+fine-grained control over a function's operations. This script takes no arguments and 
+prints to the console.
+"""
+
 # Module to interface our programme with the operating system
 import sys
 

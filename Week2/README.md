@@ -75,9 +75,13 @@ This is a Python script. This script illustrates how to extract information from
 This is a Python script. This script illustrates the use of __name == 'main': in a Python programme, and the ability to import one module into another. This script takes no arguments and prints to the console.
 
 Data:
-1. bodymass.csv
-2. testcsv.csv
-3. align_seqs.csv
+1. fasta
+- 407228326.fasta
+- 407228412.fasta
+- E.coli.fasta
+2. align_seqs.csv
+3. bodymass.csv
+4. testcsv.csv
 
 Results:
 

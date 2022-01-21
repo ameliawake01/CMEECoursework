@@ -2,6 +2,12 @@
 __author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
 __version__ = '0.0.1'
 
+"""
+This is a Python script. This script demonstrates how to write a python script to poulate 
+a dictionary and return keys and values stored as tuples. This script takes no arguments 
+and prints to the console.
+"""
+
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
          ('Peromyscus crinitus', 'Rodentia'),

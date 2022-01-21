@@ -2,6 +2,12 @@
 __author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
 __version__ = '0.0.1'
 
+"""
+This is a Python script. This script illustrates how to extract information from a nested 
+tuple and output this information line by line. This script takes no arguments and prints 
+to the console.
+"""
+
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),
           ('Junco phaeonotus','Yellow-eyed junco',19.5),

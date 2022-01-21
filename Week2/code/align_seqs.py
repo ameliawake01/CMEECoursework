@@ -3,6 +3,13 @@
 __author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
 __version__ = '0.0.1'
 
+"""
+This is a Python script. This script aligns two DNA sequences such that they are as similar
+as possible. The alignment with the highest score is saved. This script takes no arguments
+from the command line. This script takes the DNA sequences as an input from a single 
+external file in the data directory and outputs a .txt file to the results directory.
+"""
+
 # Import relevant modules
 import sys
 import csv

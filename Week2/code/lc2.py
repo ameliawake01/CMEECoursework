@@ -2,6 +2,12 @@
 __author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
 __version__ = '0.0.1'
 
+"""
+This is a Python script. This script illustrates the use of list comprehensions and 
+conventional loops and compares both methods in relation to UK rainfall data. This script 
+takes no arguments and prints to the console.
+"""
+
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets
 rainfall = (('JAN',111.4),

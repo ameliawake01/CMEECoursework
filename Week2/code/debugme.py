@@ -2,6 +2,12 @@
 __author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
 __version__ = '0.0.1'
 
+"""
+This is a Python script. This script illustrates the importance of unit testing and 
+providing feedbacj to the user at each individual calculation; it emphasises the importance 
+of 'try' and 'except'. This script takes no arguments and prints to the console.
+"""
+
 # Defining the function.
 def buggyfunc(x):
     """

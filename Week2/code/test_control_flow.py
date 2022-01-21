@@ -5,6 +5,12 @@
 __author__ = 'Amelia Wake (aw3021@ic.ac.uk)'
 __version__ = '0.0.1'
 
+"""
+This is a Python script. This script illustrates the usage of unit testing, specifically 
+the doctest module, the simplest testing tool in python for functions. This script takes 
+no arguments and prints to the console.
+"""
+
 ## imports ##
 import sys # module to interface our program with the operating system
 import doctest # import the doctest module
