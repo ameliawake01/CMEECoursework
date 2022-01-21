@@ -46,6 +46,7 @@ This is an R script. This script illustrates Girko's circular law, and draws the
 
 15. GPDD_Data.R
 This is an R script. This script demonstrates the capabilities of the additional package: maps. 
+
 16. MyBars.R
 
 17. next.R
@@ -54,6 +55,8 @@ This is an R script. This script demonstrates using the next command to skip to 
 18. plotLin.R
 19. PP_Dists.R
 20. PP_Regress.R
+This is an R script. This script behaves in the same way as GPDD_Data.R but the analysis is separated by Location.
+
 21. preallocate.R
 This is an R script. This script demonstrates the efficiency of pre-allocation. Memory allocation for a particular variable is particularly slow in R when you are using loops, due to the loops repeatedly resizing a vector and re-allocating memory. Pre-allocatign a vector that fits all the values, doesnt require a re-allocation of memory each iteration. This script takes no arguments from the command line and prints to the console.
 
