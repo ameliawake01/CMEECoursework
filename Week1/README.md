@@ -50,14 +50,14 @@ This is a bash script and it should be interpreted and run as such. This script 
 
 Data:
 1. fasta
-   -407228326.fasta
-   -407228412.fasta
-   -E.coli.fasta
+-407228326.fasta
+-407228412.fasta
+-E.coli.fasta
 2. Temperatures
-   -1800.csv
-   -1801.csv
-   -1802.csv
-   -1803.csv
+-1800.csv
+-1801.csv
+-1802.csv
+-1803.csv
 3. spawannxs.txt
 
 Results:
