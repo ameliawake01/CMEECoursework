@@ -1,6 +1,3 @@
-#install the sqlite package
-install.packages('sqldf')
-
 # To load the packages
 library(sqldf)
 

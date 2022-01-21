@@ -48,12 +48,17 @@ This is an R script. This script illustrates Girko's circular law, and draws the
 This is an R script. This script demonstrates the capabilities of the additional package: maps. 
 
 16. MyBars.R
+This is an R script. This script annotates a plot and saves a .pdf to the results directory. 
 
 17. next.R
 This is an R script. This script demonstrates using the next command to skip to the next iteration of a loop. Similarly, next and break can both be used within other loops. This script takes no arguments from the command line and prints to the console. 
 
 18. plotLin.R
+This is an R script. This script creates a self-sufficient R script that annotates a linear regression plot, and saves the resulting .pdf to the results directory. 
+
 19. PP_Dists.R
+This is an R script. This script draws and saves three figures to the results directory, containing subplots of distributions of predator mass, prey mass and the size ratio of prey mass over predator mass by feeding interaction type. 
+
 20. PP_Regress.R
 This is an R script. This script behaves in the same way as GPDD_Data.R but the analysis is separated by Location.
 
@@ -73,6 +78,7 @@ This is a simple shell script. This script tests get_TreeHeight.R and get_TreeHe
 This is an R script. This script demonstrates vectorisation using lapply and sapply. Both of these apply a function to each element of a list, but the former returns a list, while the latter returns a vector. This script takes no arguments from the command line and prints to the console.
 
 26. SQLinR.R
+This is an R script. This script demonstrates the capabilities of the package: sqldf. 
 
 27. TAutoCorr.R
 This is an R script. This script answers the question: Are temperatures of one year significantly correlated with the next year, across years ina  given location. 
