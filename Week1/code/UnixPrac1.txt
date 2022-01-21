@@ -1,14 +1,24 @@
-# Changing directory
-cd ~/Documents/CMEECourseWork/Week1/data/fasta
-# Listing the files in the fasta directory.
+# Moving from code directory to data directory in order to access the fasta directory.
+cd ~/Documents/CMEECoursework/Week1/data/fasta
+
+# Listing all of the files in the fasta directory.
 ls  
-#1 Counting the number of lines in all fasta files. 
+
+#1 Count how many lines there are in each file.
+# Counting the number of lines in all fasta files. 
 wc -l *.fasta   
-#2 Printing everything after the second line of the E.coli.fasta file.
+
+#2 Print everything starting from the second line for the E. coli genome.
 tail -n +2 ../data/fasta/E.coli.fasta 
-#3 Counting the sequence length of the genome from the second line of the E.coli.fasta file.
+
+#3 Count the sequence length of this genome.
+# Counting the sequence length of the genome from the second line of the E.coli.fasta file.
 tail -n +2 ../data/fasta/E.coli.fasta | wc -c 
-#4 Printing everything after the second line of the E.coli.fasta file, removing newline characters, identifying every "ATGC" sequence and moving them to a new line, counting the number of lines. 
+
+#4 Count the matches of a particular sequence, "ATGC" in the genome of E. coli (hint: Start by removing the first line and removing newline characters)
+# Printing everything after the second line of the E.coli.fasta file, removing newline characters, identifying every "ATGC" sequence and moving them to a new line, counting the number of lines. 
 tail -n +2 ../data/fasta/E.coli.fasta | tr -d '\n' | grep -o "ATGC" | wc -l    
-#5 Assigning calculated numbers to the variables "AT" and "GC", doing simple division between the variables using basic calculator. 
+
+#5 Compute the AT/GC ratio. 
+# Assigning calculated numbers to the variables "AT" and "GC", doing simple division between the variables using basic calculator. 
 AT=$(tail -n +2 ../data/fasta/E.coli.fasta | tr -cd 'A\|T' | wc -c) && GC=$(tail -n +2 ../data/fasta/E.coli.fasta | tr -cd 'G\|C' | wc -c) && echo "$AT/$GC" | bc -l
