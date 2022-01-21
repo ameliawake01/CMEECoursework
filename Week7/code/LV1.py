@@ -1,3 +1,7 @@
+"""
+This script demonstrates the Lotka-Volterra model.
+"""
+
 import scipy as sc
 import scipy.integrate as integrate
 import numpy as np

@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 
-""" This programme is doing the same functions as profileme.py however it has converted the loop to a list comprehension and replaced the .join with an explicit string concatenation."""
+""" 
+This programme is doing the same functions as profileme.py however it has 
+converted the loop to a list comprehension and replaced the .join with an explicit 
+string concatenation.
+"""
 
 
 def my_squares(iters):
@@ -11,7 +15,7 @@ def my_squares(iters):
     return out
 
 def my_join(iters, string):
-     """
+    """
     This function joins two stings together.
     """
     out = ''

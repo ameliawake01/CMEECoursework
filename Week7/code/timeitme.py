@@ -1,4 +1,8 @@
-"""this script is comparing the most efficient ways to do something specific, like squaring numbers and joining strings together (these have been imported from profileme.py), as part of a larger programme.""" 
+"""
+This script is comparing the most efficient ways to do something specific, like 
+squaring numbers and joining strings together (these have been imported from
+profileme.py), as part of a larger programme.
+""" 
 
 ##############################################################################
 # loops vs. list comprehensions: which is faster?

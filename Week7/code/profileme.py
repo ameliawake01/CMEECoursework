@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-""" This is a programme that does extensive maths problems in order to test profiling i.e. locate the sections of code where speed bottlenecks exist."""
+""" 
+This is a programme that does extensive maths problems in order to test profiling 
+i.e. locate the sections of code where speed bottlenecks exist.
+"""
 
 __author__ = 'Amelia Wake (awake21@ic.ac.uk)'
 __version__ = '0.0.1'

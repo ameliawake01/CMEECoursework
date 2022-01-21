@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-"""This is a programme that opens a csv file containing species data, iterates through the rows and prints "This is an oak!" when 'Quercus' is identified. It then writes a new csv file containing all of the found Quercus individuals."""
+"""
+This is a programme that opens a csv file containing species data, iterates through the 
+rows and prints "This is an oak!" when 'Quercus' is identified. It then writes a new csv 
+file containing all of the found Quercus individuals."""
 
 __author__ = 'Amelia Wake (awake21@ic.ac.uk)'
 __version__ = '0.0.1'
@@ -37,7 +40,9 @@ def main(argv):
     f = open('../data/TestOaksData.csv','r')
     g = open('../data/JustOaksData.csv','w')
     taxa = csv.reader(f)
+    next(taxa) #calling next(object) with the result of the previous line as the object will retrieve the first row of the iterator and then discard it. 
     csvwrite = csv.writer(g)
+    csvwrite.writerow(["Genus", "species"]) #pass in a simple row for the header
     oaks = set()
     for row in taxa:
         print(row)
