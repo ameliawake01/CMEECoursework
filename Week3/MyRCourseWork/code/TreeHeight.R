@@ -9,13 +9,8 @@
 #
 # OUTPUT
 # The heights of the tree, same units as "distance"
-TreeData <- read.csv("../data/trees.csv", header = TRUE) # reading in the data
 
-TreeData$Tree.Height.m <- 0 # creating a new column and filling it with zeros
-for (i in 1:nrow(TreeData)) { # populating the new column by going through each row and calculating using the function
-    n <- TreeHeight(TreeData[i,3], TreeData[i,2])
-    TreeData[i,4] <- n
-}
+TreeData <- read.csv("../data/trees.csv", header = TRUE) # reading in the data
 
 TreeHeight <- function(degrees, distance){ # function to calculate tree height
     radians <- degrees * pi / 180
@@ -25,4 +20,10 @@ TreeHeight <- function(degrees, distance){ # function to calculate tree height
     return (height)
 }
 
-write.csv(TreeData[1:2, ], "../results/TreeHts.csv") # saving output to a csv file, only displaying the first two rows
+TreeData$Tree.Height.m <- 0 # creating a new column and filling it with zeros
+for (i in 1:nrow(TreeData)) { # populating the new column by going through each row and calculating using the function
+  n <- TreeHeight(TreeData[i,3], TreeData[i,2])
+  TreeData[i,4] <- n
+}
+
+write.csv(TreeData, "../results/TreeHts.csv") # saving output to a csv file

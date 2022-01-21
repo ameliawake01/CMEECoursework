@@ -1,3 +1,9 @@
+# This is an R script. This script illustrates the browser() function, 
+# a simple way of debugging in R. The browser function allows you to insert 
+# a breakpoint in your script and then step through the code. It is used to 
+# examine local variables e.g. inside a for loop. This script takes no 
+# command line arguments and prints to the console.
+
 Exponential <- function(N0 = 1, r = 1, generations = 10){
   # Runs a simulation of exponential growth
   # Returns a vector of length generations

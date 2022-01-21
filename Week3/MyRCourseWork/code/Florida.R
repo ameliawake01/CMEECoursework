@@ -1,3 +1,9 @@
+# This is an R script. This script calculates the correlation coefficient 
+# between temperature and time in Key West, Florida. This is done using a 
+# permutation analysis, in order to answer the question: is Florida getting 
+# warmer? This script takes no arguments from the command line but extracts
+# data from a .csv file in the data directory within the script.
+
 rm(list=ls())
 load("../data/KeyWestAnnualMeanTemperature.RData")
 ls()

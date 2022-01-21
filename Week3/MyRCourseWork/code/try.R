@@ -1,3 +1,8 @@
+# This is an R script. This script illustrates the try function, which 
+# catches the errors often found in a script and allows the code to continue. 
+# This script takes no arguments from the command line and prints errors to 
+# the console.
+
 doit <- function(x){
     temp_x <- sample(x, replace = TRUE)
     if(length(unique(temp_x)) > 30) {#only take mean if sample was sufficient

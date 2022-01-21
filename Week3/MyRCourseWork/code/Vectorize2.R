@@ -1,3 +1,8 @@
+# This is an R script. This script demonstrates the stochastic Ricker 
+# model, similar to the original Ricker model, but with introduced random 
+# error. This script behaves in the same way as Ricker.R. This script takes 
+# no arguments from the command line and prints to the console. 
+
 # Runs the stochastic Ricker equation with gaussian fluctuations
 
 rm(list = ls())

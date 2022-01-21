@@ -1,3 +1,9 @@
+# This is an R script. This script demonstrates vectorisation using 
+# lapply and sapply. Both of these apply a function to each element of a 
+# list, but the former returns a list, while the latter returns a vector. 
+# This script takes no arguments from the command line and prints to the 
+# console.
+
 ######### Functions ##########
 
 ## A function to take a sample of size n from a population "popn" and return its mean

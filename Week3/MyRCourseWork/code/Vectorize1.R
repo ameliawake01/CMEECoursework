@@ -1,3 +1,14 @@
+# This is an R script. This script demonstrates the computational 
+# efficiency of vectorisation, making code more concise, easy to read 
+# and less error prone. This script takes no arguments from the command 
+# line and prints to the console.
+
+# R is slow at cycling through a data structure such as a dataframe or 
+# matrix, e.g. by using a for loop, because it is high level, interpreted
+# computer language. 
+# Vectorisation is an approach where you directly apply compiled, 
+# optimised code to run an operation on a vector, matrix or an array,
+# instead of performing the operation element-wise on the data structure.
 M <- matrix(runif(1000000),1000,1000)
 
 SumAllElements <- function(M){

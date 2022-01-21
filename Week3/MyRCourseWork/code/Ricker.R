@@ -1,3 +1,8 @@
+# This is an R script. This script illustrates the Ricker model, a classic 
+# discrete population model which was introduced in 1954 by Ricker to model 
+# recruitment of stock in fisheries. This script takes no arguments from the 
+# command line and prints to the console.
+
 Ricker <- function(N0=1, r=1, K=10, generations=50)
 {
   # Runs a simulation of the Ricker model

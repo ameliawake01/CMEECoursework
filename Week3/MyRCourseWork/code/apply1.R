@@ -1,3 +1,8 @@
+# This is an R script. This script demonstrates how to use the *apply 
+# family of functions for vectorisation. Apply can be used when you want 
+# to apply a function to the rows or columns of a matrix. This script 
+# takes no arguments from the command line and prints to the console.
+
 ## Build a random matrix
 M <- matrix(rnorm(100), 10, 10)
 
